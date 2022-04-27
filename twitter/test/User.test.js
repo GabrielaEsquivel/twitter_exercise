@@ -25,7 +25,7 @@ describe('Unit Tests for User Class', () => {
         const user = new User(1, "GabrielaEsquivel", "Andrea Gabriela", "Biografía");
 
         user.setUsername = "Andrea";
-        expect(user.getUsername).toBe("GabrielaEsquivel");
+        expect(user.getUsername).toBe("Andrea");
 
         user.setBio = "Esta es mi bio";
         expect(user.getBio).toBe("Esta es mi bio");
