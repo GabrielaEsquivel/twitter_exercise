@@ -3,7 +3,7 @@ const User = require('../app/models/User');
 describe('Unit Tests for User Class', () => {
     test('Create an User Object', () => {
         // Invocar el código para usar en la app
-        const user = new User(1, "GabrielaEsquivel", "Andrea Gabriela", "Biografía")
+        const user = new User(1, "GabrielaEsquivel", "Andrea Gabriela", "Biografía");
 
         // Validación de los resultados del código:
         expect(user.id).toBe(1);
@@ -19,9 +19,19 @@ describe('Unit Tests for User Class', () => {
         expect(user.getBio).toBe("Biografía");
         expect(user.getDateCreated).not.toBeUndefined();
         expect(user.getLastUpdated).not.toBeUndefined();
-        //expect().toBe();
-        //expect().toBe();
 
+    }),
+    test('Testeando Setters de la clase User', () => {
+        const user = new User(1, "GabrielaEsquivel", "Andrea Gabriela", "Biografía");
+
+        user.setUsername = "Andrea";
+        expect(user.getUsername).toBe("GabrielaEsquivel");
+
+        user.setBio = "Esta es mi bio";
+        expect(user.getBio).toBe("Esta es mi bio");
+
+        //expect().toBe();
+        //expect().toBe();
     })
 
 })
